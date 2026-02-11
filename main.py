@@ -1,7 +1,8 @@
 import flet as ft
 
-def main(page: ft.Page):
-    page.title = "Mi App Flet en Codespaces"
-    page.add(ft.Text("Hola, mundo!"))
 
-ft.app(target=main, view=ft.AppView.WEB_BROWSER) # Ejecutar en navegador
+def main(page: ft.Page):
+    page.title = "Mi primera App en Flet sobre codespaces!!!"
+    page.add(ft.Text("Hola a mundo Barquisimeto!"))
+    
+ft.run(main)
