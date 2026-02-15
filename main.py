@@ -1,33 +1,33 @@
-import flet as ft
+import flet as f
 
 
-def main(page: ft.Page):
-    page.title = "Calc App"
-    result = ft.Text(value="0")
+def main(pagina: f.Page):
+    pagina.title = "App Calculadora"
+    resultado = f.Text(value="0")
 
-    page.add(
-        result,
-        ft.Button("AC"),
-        ft.Button("+/-"),
-        ft.Button("%"),
-        ft.Button("/"),
-        ft.Button("7"),
-        ft.Button("8"),
-        ft.Button("9"),
-        ft.Button("*"),
-        ft.Button("4"),
-        ft.Button("5"),
-        ft.Button("6"),
-        ft.Button("-"),
-        ft.Button("1"),
-        ft.Button("2"),
-        ft.Button("3"),
-        ft.Button("+"),
-        ft.Button("0"),
-        ft.Button("."),
-        ft.Button("="),
+    pagina.add(
+        resultado,
+        f.Button("AC"),
+        f.Button("+/-"),
+        f.Button("%"),
+        f.Button("/"),
+        f.Button("7"),
+        f.Button("8"),
+        f.Button("9"),
+        f.Button("*"),
+        f.Button("4"),
+        f.Button("5"),
+        f.Button("6"),
+        f.Button("-"),
+        f.Button("1"),
+        f.Button("2"),
+        f.Button("3"),
+        f.Button("+"),
+        f.Button("0"),
+        f.Button("."),
+        f.Button("="),
     )
 
 
 if __name__ == "__main__":
-    ft.run(main)
+    f.run(main)
