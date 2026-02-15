@@ -1,6 +1,5 @@
 import flet as f
 
-
 def main(pagina: f.Page):
     pagina.title = "App Calculadora"
     resultado = f.Text(value="0")
