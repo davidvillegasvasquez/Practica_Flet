@@ -1,32 +1,53 @@
-import flet as f
+import flet as ft
 
-def main(pagina: f.Page):
-    pagina.title = "App Calculadora"
-    resultado = f.Text(value="0")
 
-    pagina.add(
-        resultado,
-        f.Button("AC"),
-        f.Button("+/-"),
-        f.Button("%"),
-        f.Button("/"),
-        f.Button("7"),
-        f.Button("8"),
-        f.Button("9"),
-        f.Button("*"),
-        f.Button("4"),
-        f.Button("5"),
-        f.Button("6"),
-        f.Button("-"),
-        f.Button("1"),
-        f.Button("2"),
-        f.Button("3"),
-        f.Button("+"),
-        f.Button("0"),
-        f.Button("."),
-        f.Button("="),
+def main(page: ft.Page):
+    page.title = "Calc App"
+    result = ft.Text(value="0")
+
+    page.add(
+        ft.Row(controls=[result]),
+        ft.Row(
+            controls=[
+                ft.Button("AC"),
+                ft.Button("+/-"),
+                ft.Button("%"),
+                ft.Button("/"),
+            ]
+        ),
+        ft.Row(
+            controls=[
+                ft.Button("7"),
+                ft.Button("8"),
+                ft.Button("9"),
+                ft.Button("*"),
+            ]
+        ),
+        ft.Row(
+            controls=[
+                ft.Button("4"),
+                ft.Button("5"),
+                ft.Button("6"),
+                ft.Button("-"),
+            ]
+        ),
+        ft.Row(
+            controls=[
+                ft.Button("1"),
+                ft.Button("2"),
+                ft.Button("3"),
+                ft.Button("+"),
+            ]
+        ),
+        ft.Row(
+            controls=[
+                ft.Button("0"),
+                ft.Button("."),
+                ft.Button("="),
+            ]
+        ),
     )
 
 
 if __name__ == "__main__":
-    f.run(main)
+    ft.run(main)
