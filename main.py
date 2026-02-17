@@ -1,7 +1,7 @@
 from controles.calculadora import CalculatorApp
-from dataclasses import f
+import flet as ft
 
-def main(pagina: f.Page):
+def main(pagina: ft.Page):
     pagina.title = "Calc App"
     # create application instance
     calculadora1 = CalculatorApp()
@@ -10,4 +10,4 @@ def main(pagina: f.Page):
     # add application's root control to the page
     pagina.add(calculadora1, calculadora2)
 
-f.run(main)
+ft.run(main)
