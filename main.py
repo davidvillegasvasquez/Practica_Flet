@@ -2,7 +2,7 @@ from controles.calculadora import AppCalculadora
 import flet as f #Debo importar flet así AppCalculadora lo haya hecho en su módulo.
 
 def main(pagina: f.Page):
-    pagina.title = "Calc App"
+    pagina.title = "App de Calculadora"
     # create application instance
     calculadora1 = AppCalculadora()
     calculadora2 = AppCalculadora()
@@ -11,7 +11,7 @@ def main(pagina: f.Page):
     pagina.add(calculadora1, calculadora2)
 
     #Si queremos mostrar una al lado de otra, debemos colocarlo dentro de un control fila.
-    #Recuerde que el primer parámetro posicional tiene el nombre "controls", y es una lista - f.row(controls=[ctl1,ctl2,...], de modo que podemos prescindir de su nombre:
-    pagina.add(f.row([calculadora1, calculadora2]))
+    #Recuerde que el primer parámetro posicional tiene el nombre "controls", y es una lista - f.Row(controls=[ctl1,ctl2,...], de modo que podemos prescindir de su nombre:
+    pagina.add(f.Row([calculadora1, calculadora2]))
     
 f.run(main)
