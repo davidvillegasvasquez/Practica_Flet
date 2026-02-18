@@ -1,8 +1,9 @@
-from dataclasses import field
-
+#Como el módulo botones.py está dentro del mismo directorio calculadora.py, usamos .botones en lugar de controles.botones:
+from .botones import CalcButton, DigitButton, ActionButton, ExtraActionButton
+#from dataclasses import field
 import flet as f
 
-
+"""
 @f.control
 class CalcButton(f.Button):
     expand: int = field(default_factory=lambda: 1)
@@ -25,9 +26,10 @@ class ExtraActionButton(CalcButton):
     bgcolor: f.Colors = f.Colors.BLUE_GREY_100
     color: f.Colors = f.Colors.BLACK
 
+"""
 
 @f.control
-class CalculatorApp(f.Container):
+class AppCalculadora(f.Container):
     def init(self):
         self.width = 350
         self.bgcolor = f.Colors.BLACK
@@ -81,16 +83,3 @@ class CalculatorApp(f.Container):
                 ),
             ]
         )
-
-"""
-def main(page: f.Page):
-    page.title = "Calc App"
-    # create application instance
-    calc = CalculatorApp()
-
-    # add application's root control to the page
-    page.add(calc)
-
-
-f.run(main)
-"""
