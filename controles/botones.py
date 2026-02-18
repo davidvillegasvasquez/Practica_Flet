@@ -1,6 +1,9 @@
 from dataclasses import field
 import flet as f
 
+#Tarea: hacer una clase botón genérica de enviar
+#botonEnviar = f.Button("Enviar", on_click=send_click)
+
 @f.control
 class CalcButton(f.Button):
     expand: int = field(default_factory=lambda: 1)
