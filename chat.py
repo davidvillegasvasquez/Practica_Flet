@@ -4,7 +4,7 @@ import flet as f
 def main(pagina: f.Page):
     chat = f.Column()
     nuevoMensaje = f.TextField()
-    botonEnviar = f.Button("Enviar", on_click=enviar_click)
+    botonEnviar = f.Button("Enviar", on_click=enviarClick)
     envio = f.Row(controls=[nuevoMensaje, botonEnviar])
 
     #El nombre arbitrario "eventoX", recibe el objeto del evento, conteniendo detalles del clic. Por lo general se nombra "e" para más limpieza:
@@ -16,6 +16,5 @@ def main(pagina: f.Page):
         chat,
         envio,
     )
-
 
 f.run(main)
