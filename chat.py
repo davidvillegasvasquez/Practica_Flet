@@ -2,9 +2,9 @@ import flet as f
 #from controles.botones import botonEnviar as send (para tarea).
 
 def main(pagina: f.Page):
-    page.title = "Pepis Chat"
-    page.adaptive = True  # Mejora el look and feel nativo
-    page.scroll = "auto"  # Permite scroll si el contenido es largo
+    pagina.title = "Pepis Chat"
+    pagina.adaptive = True  # Mejora el look and feel nativo
+    pagina.scroll = "auto"  # Permite scroll si el contenido es largo
     chat = f.Column()
     nuevoMensaje = f.TextField()
 
