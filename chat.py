@@ -4,7 +4,6 @@ import flet as f
 def main(pagina: f.Page):
     chat = f.Column()
     nuevoMensaje = f.TextField()
-    botonEnviar = f.Button("Enviar", on_click=enviar_click)
 
     #El nombre arbitrario "eventoX", recibe el objeto del evento, conteniendo detalles del clic. Por lo general se nombra "e" para más limpieza:
     def enviarClick(eventoX):
