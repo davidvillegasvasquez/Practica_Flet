@@ -12,7 +12,7 @@ def main(pagina: f.Page):
 
     pagina.add(
         chat,
-        f.Row(controls=[nuevoMensaje, f.Button("Enviar", on_click=enviar_click)]),
+        f.Row(controls=[nuevoMensaje, f.Button("Enviar", on_click=enviarClick)]),
     )
 
 f.run(main)
