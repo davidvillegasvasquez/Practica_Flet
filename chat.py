@@ -1,5 +1,12 @@
+from dataclasses import dataclass
 import flet as f
 #from controles.botones import botonEnviar as send (para tarea).
+
+@dataclass
+class Mensaje:
+    usuario: str
+    texto: str
+
 
 def main(pagina: f.Page):
     pagina.title = "Pepis Chat"
@@ -8,9 +15,15 @@ def main(pagina: f.Page):
     chat = f.Column()
     nuevoMensaje = f.TextField()
 
+    def enMensaje(mensaje: Mensaje):
+        chat.controls.append(ft.Text(f"{mensaje.usuario}: {mensaje.texto}"))
+        pagina.update()
+
+    pagina.pubsub.subscribe(enMensaje)
+
     #El nombre arbitrario "eventoX", recibe el objeto del evento, conteniendo detalles del clic. Por lo general se nombra "e" para más limpieza:
     def enviarClick(eventoX):
-        chat.controls.append(f.Text(nuevoMensaje.value))
+        pagina.pubsub.send_all(Mensaje(usuario = pagina.session.id, texto = nuevoMensaje.value))
         nuevoMensaje.value = ""
 
     pagina.add(
