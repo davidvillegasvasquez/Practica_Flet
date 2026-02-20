@@ -7,7 +7,6 @@ class Mensaje:
     usuario: str
     texto: str
 
-
 def main(pagina: f.Page):
     pagina.title = "Pepis Chat"
     pagina.adaptive = True  # Mejora el look and feel nativo
@@ -16,7 +15,7 @@ def main(pagina: f.Page):
     nuevoMensaje = f.TextField()
 
     def enMensaje(mensaje: Mensaje):
-        chat.controls.append(ft.Text(f"{mensaje.usuario}: {mensaje.texto}"))
+        chat.controls.append(f.Text(f"{mensaje.usuario}: {mensaje.texto}"))
         pagina.update()
 
     pagina.pubsub.subscribe(enMensaje)
