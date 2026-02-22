@@ -40,7 +40,7 @@ def main(pagina: f.Page):
         )
         nuevoMensaje.value = ""
 
-    nombre_usuario = ft.TextField(label="Introduce tu nombre")
+    nombre_usuario = f.TextField(label="Introduce tu nombre")
 
     def unirse_click(e):
         if not usuario_nombre.value:
