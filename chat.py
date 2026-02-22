@@ -33,7 +33,7 @@ def main(pagina: f.Page):
     def enviarClick(eventoX):
         pagina.pubsub.send_all(
             Mensaje(
-                usuario=pagina.session.store.get("nombre_usuario"),
+                usuario=pagina.session.get("nombre_usuario"),
                 texto=nuevoMensaje.value,
                 tipoDeMensaje="mensaje_chat",
             )
@@ -46,7 +46,7 @@ def main(pagina: f.Page):
         if nombre_usuario.value:
             nombre_usuario.error_text = "Nombre no puede ser vacio!"
         else:
-            pagina.session.store.set("nombre_usuario", nombre_usuario.value)
+            pagina.session.set("nombre_usuario", nombre_usuario.value)
             # page.dialog.open = False
             pagina.pop_dialog()
             pagina.pubsub.send_all(
@@ -70,7 +70,6 @@ def main(pagina: f.Page):
 
     pagina.add(
         chat,
-        f.ResponsiveRow(controls=[nuevoMensaje, f.Button("Enviar", on_click=enviarClick)]),
-    )
+        f.ResponsiveRow(controls=[nuevoMensaje, f.Button("Enviar", on_click=enviarClick)]))
 
 f.run(main)
