@@ -33,7 +33,7 @@ def main(pagina: f.Page):
     def enviarClick(eventoX):
         pagina.pubsub.send_all(
             Mensaje(
-                usuario=pagina.session.get("nombre_usuario"),
+                usuario=pagina.session.store.get("nombre_usuario"),
                 texto=nuevoMensaje.value,
                 tipoDeMensaje="mensaje_chat",
             )
@@ -46,7 +46,7 @@ def main(pagina: f.Page):
         if not nombre_usuario.value:
             nombre_usuario.error_text = "Nombre no puede ser vacio!"
         else:
-            pagina.session.set("nombre_usuario", nombre_usuario.value)
+            pagina.session.store.set("nombre_usuario", nombre_usuario.value)
             # page.dialog.open = False
             pagina.pop_dialog()
             pagina.pubsub.send_all(
