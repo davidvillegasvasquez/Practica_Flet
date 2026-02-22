@@ -43,7 +43,7 @@ def main(pagina: f.Page):
     nombre_usuario = f.TextField(label="Introduce tu nombre")
 
     def unirse_click(e):
-        if nombre_usuario.value:
+        if not nombre_usuario.value:
             nombre_usuario.error_text = "Nombre no puede ser vacio!"
         else:
             pagina.session.set("nombre_usuario", nombre_usuario.value)
