@@ -47,6 +47,7 @@ def main(pagina: f.Page):
     def unirse_click(e):
         if not nomUsuario.value:
             nomUsuario.error_text = "Nombre no puede ser vacio!"
+            pagina.update()
         else:
             pagina.session.store.set("nomUserEnSesion", nomUsuario.value)
             # page.dialog.open = False
