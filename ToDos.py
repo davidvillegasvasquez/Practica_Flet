@@ -27,7 +27,11 @@ def main(pagina: f.Page):
     pagina.title = "Para Hacer"
     encabezado = f.Text(value="Tareas", color=f.Colors.BLACK, size=40)
     nuevaTarea = f.TextField()
-    listaDeTareas = f.Column()
+    listaDeTareas = ft.ListView(
+        expand=True,
+        spacing=10,
+        auto_scroll=True,
+    )
 
     def clickEnMenuTodasActivasCompletadas(eventoMenuTodActiComple):
         # eventoMenuTodActiComple.control es el texto que fue clickeado
@@ -73,7 +77,10 @@ def main(pagina: f.Page):
                         completadas,   
                     ],
                 ),
-                listaDeTareas,   
+                ft.Container(
+                    content=listaDeTareas,
+                    expand=True,
+                ),   
                 f.Row(
                     controls=[
                         f.Text("item activos restantes", size=10),
