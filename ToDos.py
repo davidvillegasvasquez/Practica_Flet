@@ -71,13 +71,11 @@ def main(pagina: f.Page):
                     ],
                 ),
                 
-                #f.Row(
+                f.Row(
                     controls=[
                         listaDeTareas,
-                    ]
+                       ]
                 ),
-                
-                listaDeTareas,
                 f.Row(
                     controls=[
                         f.Text("item activos restantes", size=10),
