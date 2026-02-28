@@ -26,7 +26,7 @@ class LineaDeTarea():
 
 def main(pagina: f.Page):
     pagina.title = "Para Hacer"
-    encabezado = f.Text(value="Tareas", color=f.Colors.WHITE, size=40, alignment=f.MainAxisAlignment.CENTER)
+    encabezado = f.Text(value="Tareas", color=f.Colors.WHITE, size=40)
     nuevaTarea = f.TextField()
     listaDeTareas = f.Column()
 
