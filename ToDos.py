@@ -48,7 +48,6 @@ def main(pagina: f.Page):
         listaDeTareas.controls.append(nuevaTarea.value)     
        
         nuevaTarea.value = ""
-        pagina.update()
 
     pagina.add(
         f.Column(
