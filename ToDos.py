@@ -41,16 +41,15 @@ def main(pagina: f.Page):
         eventoMenuTodActiComple.control.update() # Actualiza el elemento en pantalla
 
     # Crear los textos con propiedades iniciales
-    todas = f.Text("Todas", size=20, color="black")
+    todas = f.Text("Todas", size=10, color="black")
 
-    activas = f.Text("Activas", size=20, color="black")#, on_click=clickEnMenuTodasActivasCompletadas)
+    activas = f.Text("Activas", size=10, color="black")#, on_click=clickEnMenuTodasActivasCompletadas)
 
-    completadas = f.Text("Completadas", size=20, color="black")#, on_click=clickEnMenuTodasActivasCompletadas)
+    completadas = f.Text("Completadas", size=10, color="black")#, on_click=clickEnMenuTodasActivasCompletadas)
 
     def ingresarTarea(eventoX):
         #tarea = Tarea(texto=nuevaTarea.value)
-        listaDeTareas.controls.append(
-            LineaDeTarea(Tarea(texto=nuevaTarea.value))     
+        listaDeTareas.controls.append(nuevaTarea.value)     
         )
        
         nuevaTarea.value = ""
