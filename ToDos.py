@@ -10,7 +10,6 @@ class LineaDeTarea():
     def __init__(self, tarea: Tarea):
         super().__init__()
         self.tarea = tarea
-        self.vertical_alignment = f.CrossAxisAlignment.START
         self.controls = [
             f.Row(
                 tight=True,
@@ -74,7 +73,12 @@ def main(pagina: f.Page):
                         completadas,   
                     ]
                 ),
-                listaDeTareas,
+                f.Row(
+                    controls=[
+                        listaDeTareas,   
+                    ]
+                ),
+
                 f.Row(
                     controls=[
                         f.Text("item activos restantes", size=10),
