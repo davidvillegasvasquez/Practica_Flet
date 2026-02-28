@@ -46,7 +46,7 @@ def main(pagina: f.Page):
     def ingresarTarea(eventoX):
         tarea = Tarea(texto=nuevaTarea.value)
         #listaDeTareas.controls.append(f.Text(nuevaTarea.value))
-        listaDeTareas.controls.append(LineaDeTarea(nuevaTarea.value))
+        listaDeTareas.controls.append(LineaDeTarea(tarea.texto))
         nuevaTarea.value = ""
         pagina.update()
         
