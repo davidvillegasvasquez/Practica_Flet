@@ -1,4 +1,4 @@
-from dataclasses import field
+from dataclasses import dataclass
 import flet as f
 
 @dataclass
