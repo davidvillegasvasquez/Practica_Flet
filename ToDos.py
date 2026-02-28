@@ -16,7 +16,7 @@ class LineaDeTarea():
                 spacing=5,
                 controls=[
                     #f.CheckBox(),
-                    f.Text(self.tarea.texto, selectable=True),
+                    f.Text(self.tarea.texto, selectable=True, color=f.Colors.BLACK),
                     #f.IconoLapicero(),
                     #f.IconoPapelera,
                 ],
