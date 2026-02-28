@@ -9,7 +9,7 @@ class Tarea:  # noqa: B903
 class LineaDeTarea():
     def __init__(self, tarea: Tarea):
         super().__init__()
-        self.message = message
+        self.tarea = tarea
         self.vertical_alignment = f.CrossAxisAlignment.START
         self.controls = [
             f.Row(
@@ -85,5 +85,4 @@ def main(pagina: f.Page):
         ),
     )
 
-if __name__ == "__main__":
-    f.run(main)
+f.run(main)
