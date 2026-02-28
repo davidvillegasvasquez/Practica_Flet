@@ -77,9 +77,9 @@ def main(pagina: f.Page):
                 ),
                 f.Row(
                     controls=[
-                        ft.Container(
-                            content=chat,
-                            border=ft.Border.all(1, ft.Colors.OUTLINE),
+                        f.Container(
+                            content=listaDeTareas,
+                            border=f.Border.all(1, f.Colors.OUTLINE),
                             border_radius=5,
                             padding=10,
                             expand=False,
