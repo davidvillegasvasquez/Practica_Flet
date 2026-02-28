@@ -70,11 +70,14 @@ def main(pagina: f.Page):
                         completadas,   
                     ],
                 ),
+                """
                 f.Row(
                     controls=[
                         listaDeTareas,
                     ]
                 ),
+                """
+                listaDeTareas,
                 f.Row(
                     controls=[
                         f.Text("item activos restantes", size=10),
