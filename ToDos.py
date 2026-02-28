@@ -29,8 +29,7 @@ def main(pagina: f.Page):
     nuevaTarea = f.TextField()
     #listaDeTareas = f.Column()
     listaDeTareas = f.ListView(
-        expand=True,
-        spacing=10,
+        expand=False,
         auto_scroll=True,
     )
 
@@ -76,12 +75,10 @@ def main(pagina: f.Page):
                         completadas,   
                     ],
                 ),
-                f.Container(
-                    content=listaDeTareas,
-                    border=f.Border.all(1, f.Colors.OUTLINE),
-                    border_radius=5,
-                    padding=10,
-                    expand=True,
+                f.Row(
+                    controls=[
+                        listaDeTareas   
+                    ],
                 ),
                 f.Row(
                     controls=[
