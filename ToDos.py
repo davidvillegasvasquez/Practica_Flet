@@ -70,13 +70,13 @@ def main(pagina: f.Page):
                         completadas,   
                     ],
                 ),
-                """
-                f.Row(
+                
+                #f.Row(
                     controls=[
                         listaDeTareas,
                     ]
                 ),
-                """
+                
                 listaDeTareas,
                 f.Row(
                     controls=[
