@@ -44,9 +44,7 @@ def main(pagina: f.Page):
     completadas = f.Text("Completadas", size=10, color="black")#, on_click=clickEnMenuTodasActivasCompletadas)
 
     def ingresarTarea(eventoX):
-        tarea = Tarea(texto=nuevaTarea.value)
-        #listaDeTareas.controls.append(f.Text(nuevaTarea.value))
-        listaDeTareas.controls.append(LineaDeTarea(tarea))
+        listaDeTareas.controls.append(f.Text(nuevaTarea.value))
         nuevaTarea.value = ""
         pagina.update()
         
