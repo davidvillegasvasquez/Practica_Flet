@@ -45,10 +45,10 @@ def main(pagina: f.Page):
 
     def ingresarTarea(eventoX):
         #tarea = Tarea(texto=nuevaTarea.value)
-        listaDeTareas.controls.append(nuevaTarea.value)     
-       
+        listaDeTareas.controls.append(ft.Text(nuevaTarea.value))
         nuevaTarea.value = ""
-
+        pagina.update()
+        
     pagina.add(
         f.Column(
             controls=[
