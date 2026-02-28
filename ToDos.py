@@ -16,7 +16,7 @@ class LineaDeTarea():
                 spacing=5,
                 controls=[
                     #f.CheckBox(),
-                    f.Text(self.tarea.texto, selectable=True),
+                    f.Text(self.tarea.texto, selectable=True, color=f.Colors.BLACK),
                     #f.IconoLapicero(),
                     #f.IconoPapelera,
                 ],
@@ -27,7 +27,7 @@ def main(pagina: f.Page):
     pagina.title = "Para Hacer"
     encabezado = f.Text(value="Tareas", color=f.Colors.BLACK, size=40)
     nuevaTarea = f.TextField()
-    listaDeTareas = ft.ListView(
+    listaDeTareas = f.ListView(
         expand=True,
         spacing=10,
         auto_scroll=True,
@@ -76,7 +76,7 @@ def main(pagina: f.Page):
                         completadas,   
                     ],
                 ),
-                ft.Container(
+                f.Container(
                     content=listaDeTareas,
                     expand=True,
                 ),   
